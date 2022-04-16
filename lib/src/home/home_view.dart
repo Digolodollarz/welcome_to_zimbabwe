@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_to_zimbabwe/src/common/widgets/search_widget.dart';
 import 'package:welcome_to_zimbabwe/src/home/widgets/home_card.dart';
 
 class HomeView extends StatelessWidget {
@@ -12,7 +13,25 @@ class HomeView extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 64),
+            Row(
+              children: [
+                Flexible(
+                  child: Text(
+                    'Where Do You Want To Go',
+                    style: TextStyle(
+                      fontSize: 28,
+                    ),
+                  ),
+                ),
+                SizedBox(width: 64),
+              ],
+            ),
+            SizedBox(height: 16),
+            SearchField(),
+            SizedBox(height: 16),
             SizedBox(
               height: 200,
               child: ListView(
